@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<h1 style="color:brown;">Hàm tính tổng </h1>
+<button style="width:130px; height:30px" onclick="result()"> Nhập 2 số</button>
+<p id="result"></p>
+</body>
+<script>
+
+    function sum(num1, num2) {
+        if (num1 > num2) {
+            return document.getElementById('result').innerHTML = "Số " + num1 + " lớn hơn số " + num2;
+        } else {
+            let sum = num1 + num2;
+            return  num1 + " + " + num2 + " = " + sum ;
+        }
+    }
+
+    function result() {
+        let num1 = +prompt("Nhập số thứ nhất");
+        let num2 = +prompt("Nhập số thứ hai");
+        let result = sum(num1, num2);
+        document.getElementById('result').innerHTML = result;
+    }
+</script>
+</html>
